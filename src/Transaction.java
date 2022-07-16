@@ -7,14 +7,12 @@ public class Transaction {
     //The time and date of this transaction
     private Date timestamp;
 
-    /**
-     *  A memo for this transaction
-     */
+    //a memo for this transaction
+
     private String memo;
 
-    /**
-     *  The account in which the transaction was performed
-     */
+
+    //The account in which the transaction was performed
     private Account inAccount;
 
     /**

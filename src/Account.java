@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 public class Account {
 
-    /**
-     * The name of the Account
-     */
+
+    //The name of the Account
+
     private String name;
 
-    /**
-     * The account ID number
-     */
+
+    //The account ID number
+
     private String uuid;
 
-    /**
-     * The user object that owns this account
-     */
+
+    //The user object that owns this account
+
     private User holder;
 
-    /**
-     * The list of transaction for this account
-     */
+
+    //The list of transaction for this account
+
     private ArrayList<Transaction> transactions;
 
     /**

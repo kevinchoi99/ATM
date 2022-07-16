@@ -3,29 +3,26 @@ import java.util.ArrayList;
 import java.security.MessageDigest;
 public class User {
 
-    /**
-     * First name of the user
-     */
+
+    //First name of the user
     private String firstName;
 
-    /**
-     * Last name of the user
-     */
+
+    //Last name of the user
     private String lastName;
 
-    /**
-     * ID number of the user
-     */
+
+    //ID number of the user
+
     private String uuid;
 
-    /**
-     * Hash of the user's pin number
-     */
+
+    //Hash of the user's pin number
+
     private byte pinHash[];
 
-    /**
-     * The list of Accounts for the user
-     */
+
+    //The list of Accounts for the user
     private ArrayList<Account> accounts;
 
     /**
