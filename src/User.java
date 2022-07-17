@@ -56,7 +56,8 @@ public class User {
         this.accounts = new ArrayList<Account>();
 
         // print log message
-        System.out.printf("New user %s, %s with ID %s created./n", lastName, firstName, this.uuid);
+        System.out.printf("New user %s, %s with ID %s created. \n", lastName, firstName, this.uuid);
+
     }
 
     /**
@@ -93,4 +94,33 @@ public class User {
 
 
     }
+
+    // returns the user's first name
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void printAccountSummary(){
+
+        System.out.printf(" \n \n %s's accounts summary", this.firstName);
+        for(int a = 0; a < this.accounts.size(); a++){
+            System.out.printf("%d. %s \n", a+1, this.accounts.get(a).getSummaryLine());
+
+        }
+        System.out.println();
+    }
+
+    // get the number of accounts of the user
+    public int numAccounts(){
+        return this.accounts.size();
+    }
+
+    // print transaction history for account
+    public void printAcctTransHistory(int acctIdx){
+
+        this.accounts.get(acctIdx).printTransHistory();
+
+
+    }
+
 }

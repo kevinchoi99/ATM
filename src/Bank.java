@@ -87,8 +87,12 @@ public class Bank {
 
     }
 
+    // adds account into 'accounts'
+    public void addAccount(Account anAcct){
+        this.accounts.add(anAcct);
+    }
 
-
+    // adds user details into 'user' and 'accounts'
     public User addUser(String firstName, String lastName, String pin){
 
         //create a new User object and add it to our list
@@ -104,6 +108,7 @@ public class Bank {
 
     }
 
+    // validates the login credentials
     public User userLogin(String userID, String pin){
 
         //search through list of users
@@ -117,5 +122,9 @@ public class Bank {
 
         // if we haven't found the user or have incorrect pin
         return null;
+    }
+
+    public String getName(){
+        return this.name;
     }
 }
