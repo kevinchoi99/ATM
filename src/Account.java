@@ -72,11 +72,22 @@ public class Account {
 
     // print the transaction history of the account
     public void printTransHistory(){
-        System.out.printf("\n transaction histor for account %s\n", this.uuid);
+        System.out.printf("\ntransaction history for account %s\n", this.uuid);
+
         for (int t = this.transactions.size()-1; t >= 0; t--){
-            System.out.printf(this.transactions.get(t).getSummaryLine());
+            System.out.println(this.transactions.get(t).getSummaryLine());
 
         }
+
         System.out.println();
+    }
+
+    // Add a new transaction in this account
+    public void addTransaction(double amount, String memo){
+
+        //create a new transaction object and add it to the list
+        Transaction newTrans = new Transaction(amount,memo,this);
+        this.transactions.add(newTrans);
+
     }
 }

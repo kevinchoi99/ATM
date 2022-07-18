@@ -65,7 +65,9 @@ public class User {
      * @param anAcct    -the account to be added
      */
     public void addAccount(Account anAcct){
+
         this.accounts.add(anAcct);
+
     }
 
     /**
@@ -97,12 +99,14 @@ public class User {
 
     // returns the user's first name
     public String getFirstName(){
+
         return this.firstName;
+
     }
 
     public void printAccountSummary(){
 
-        System.out.printf(" \n \n %s's accounts summary", this.firstName);
+        System.out.printf(" \n \n %s's accounts summary\n", this.firstName);
         for(int a = 0; a < this.accounts.size(); a++){
             System.out.printf("%d. %s \n", a+1, this.accounts.get(a).getSummaryLine());
 
@@ -112,7 +116,9 @@ public class User {
 
     // get the number of accounts of the user
     public int numAccounts(){
+
         return this.accounts.size();
+
     }
 
     // print transaction history for account
@@ -120,7 +126,25 @@ public class User {
 
         this.accounts.get(acctIdx).printTransHistory();
 
+    }
+
+    // get the balance of the account
+    public double getAcctBalance(int acctIdx){
+
+        return this.accounts.get(acctIdx).getBalance();
 
     }
 
+    // get the UUID of an account
+    public String getAcctUUID(int acctIdx){
+
+        return this.accounts.get(acctIdx).getUUID();
+
+    }
+
+    public void addAcctTransaction(int acctIdx, double amount, String memo){
+
+        this.accounts.get(acctIdx).addTransaction(amount,memo);
+
+    }
 }
