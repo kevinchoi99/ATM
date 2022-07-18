@@ -44,9 +44,12 @@ public class Account {
      * @return uuid
      */
     public String getUUID(){
+
         return this.uuid;
+
     }
 
+    // Write the summary line
     public String getSummaryLine(){
 
         // get the account balance
